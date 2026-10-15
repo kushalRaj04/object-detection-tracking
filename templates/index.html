@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Object Detection & Tracking</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <h1>Object Detection & Tracking</h1>
+
+        <p>
+            Real-time object detection and tracking using
+            YOLO, OpenCV and Flask
+        </p>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <!-- Video Section -->
+
+        <section class="video-section">
+
+            <div class="section-title">
+
+                <h2>Live Camera</h2>
+
+                <span class="status">
+                    ● LIVE
+                </span>
+
+            </div>
+
+
+            <div class="video-container">
+
+                <img
+                    src="{{ url_for('video_feed') }}"
+                    alt="Live Object Detection Feed"
+                >
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Statistics Section -->
+
+        <section class="info-section">
+
+
+            <div class="info-card">
+
+                <h3>Camera</h3>
+
+                <p>
+                    <span class="indicator"></span>
+                    Connected
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>Detection</h3>
+
+                <p>
+                    <span class="indicator"></span>
+                    YOLO Active
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>Tracking</h3>
+
+                <p>
+                    <span class="indicator"></span>
+                    ByteTrack Active
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+       <section class="statistics-section">
+
+    <h2>Object Statistics</h2>
+
+
+    <div class="statistics-grid">
+
+        <div class="stat-card">
+
+            <h3>Total Objects</h3>
+
+            <p id="object-count">
+                0
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h3>Tracked Objects</h3>
+
+            <p id="tracked-count">
+                0
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h3>System Status</h3>
+
+            <p id="system-status">
+                Running
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Object Type Counts -->
+
+    <div class="object-types">
+
+        <h3>Detected Object Types</h3>
+
+        <div id="object-types-list">
+
+            <p>No objects detected</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- Technologies -->
+
+        <section class="technology-section">
+
+            <h2>Technologies Used</h2>
+
+
+            <div class="technology-list">
+
+                <span>Python</span>
+
+                <span>Flask</span>
+
+                <span>OpenCV</span>
+
+                <span>YOLO</span>
+
+                <span>ByteTrack</span>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+
+        <p>
+            Object Detection & Tracking Project
+        </p>
+
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
